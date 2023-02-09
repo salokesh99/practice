@@ -1,0 +1,16 @@
+var count = 5;
+var count1 = 'aaa';
+var a;
+var count2;
+var aa;
+aa = 'ram';
+var ss;
+var bb;
+var arr;
+var arr0;
+var arr1 = ['a', 'b', 'c'];
+var arr2;
+var arr2_1 = ['a', 1, true, false];
+var arr3;
+count = 'a';
+console.log(count);
