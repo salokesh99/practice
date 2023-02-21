@@ -1,0 +1,11 @@
+ndim = dimension of the array
+dtype = data type of an array
+arr.copy() = creates copy
+arr.view() = creates a view
+arr.base = tells if an array has a base or not
+arr.astype('i') convert array to other types
+arr.shape => gives shape of an array
+print(arr2.ndim)
+print(arr2.shape)
+new_arr = arr1.reshape(4,4, 2)
+arr1.reshape(-1) - > flattens multi dimensional array

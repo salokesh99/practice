@@ -73,13 +73,18 @@ arr9 = arr6[0:1,2]
 print('arr9', arr9)
 
 #difference between arr6[0:2][1] and  arr6[0:2, 2]
-print('arr6', arr6)
+print("difference between arr6[0:2][1] and  arr6[0:2, 2]")
+print('arr6===>', arr6)
 arr8 = arr6[0:3][2]
 print('arr8', arr8)
-#throws error
 try :
-
-    arr8 = arr6[0:2][2]
-    print('arr8', arr8)
+    arr9 = arr6[0:3, 2]
+    print('arr9', arr9)
 except:
     print('not possible')
+
+
+arr10 = arr6[0:2, 1:3]
+print('arr10', arr10)
+arr11 = arr6[0:2][1:3]
+print('arr11', arr11)

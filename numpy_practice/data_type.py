@@ -67,7 +67,7 @@ print(arr6)
 arr7 = np.array([1,3,4,5,0])
 arr8 = arr7.astype('bool')
 print(arr8.ndim, arr8.dtype)
-print(arr8)
+print('arr8', arr8)
 
 
 
