@@ -8,7 +8,7 @@ for x in arr:
       print(z)
 
 
-arr1 = np.array([[[1,2,3], [4,3,2], [1,2,6], [1,2,5]]])
+arr1 = np.array([[[[1,2,3], [4,3,2], [1,2,6], [1,2,5]]]])
 for i in np.nditer(arr1):
     print(i)
 
