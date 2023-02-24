@@ -1,0 +1,3 @@
+HR -
+1. list comprehension problem
+newlist = [x for x in fruits if "a" in x]
