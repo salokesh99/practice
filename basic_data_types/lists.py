@@ -1,2 +1,0 @@
-#basic usage of lists
-
