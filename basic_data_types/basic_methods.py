@@ -89,7 +89,7 @@ l4 = ['tortoise', 'Tortoise', 'TORTOISE']
 # print('l1 after reversing - ', l1)
 # print('==================$$$=====================')
 
-# 6) remove an element from list, only the first occurance will be removed.
+# 6) remove an element from list, only the first occurance of given will be removed.
 # list.remove()
 # print('==================$$$=====================')
 # print('l1 - ', l1)
@@ -130,6 +130,18 @@ l4 = ['tortoise', 'Tortoise', 'TORTOISE']
 # print('l4 - ', l4)
 
 # # with keywords we can use sorting in a definitive filters.
+#pending
+# def myfunc(n):
+#     print(n, n-50)
+#     return abs(n - 50)
+
+
+# thislist = [100, 50, 65, 82, 23]
+# print('sorted via key ---------- ',thislist)
+# thislist.sort(key = myfunc)
+# print('sorted via key ---------- ',thislist)
+
+
 
 #8) extend method 
 
@@ -163,6 +175,7 @@ l4 = ['tortoise', 'Tortoise', 'TORTOISE']
 # 10) pop method - removes specified index, or last if left blank
 
 # l1 = ['a', 'b', 'c', 'd', 'e', 'a', 'c']
+# print(l1)
 # l1.pop(3)
 # print('l1==>', l1)
 # l1.pop()
@@ -184,10 +197,16 @@ l1 = ['a', 'b', 'c', 'd', 'e', 'a', 'c']
 # l1.clear()
 # # this will not throw the error, just empties the list
 # print('l1==>', l1)
+# list comprehension example
+# l2 = [ x if x in 'abcdef' else 'xx' for x in l1 ]
 
-l2 = [ x if x in 'abcdef' else 'xx' for x in l1 ]
+# print(l2)
 
-print(l2)
+
+#13) list.index() function
+
+# c = l1.index('c')
+# print(c)
 
 
 
