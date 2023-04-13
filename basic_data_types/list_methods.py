@@ -193,6 +193,12 @@ l4 = ['tortoise', 'Tortoise', 'TORTOISE']
 #12) clear the list
 
 l1 = ['a', 'b', 'c', 'd', 'e', 'a', 'c']
+
+
+
+
+
+
 # print('l1==>', l1)
 # l1.clear()
 # # this will not throw the error, just empties the list
@@ -211,8 +217,11 @@ l1 = ['a', 'b', 'c', 'd', 'e', 'a', 'c']
 
 
 
+l1 = ['a', 'b', 'c', 'd', 'e']
+d1 = {'a':1, 'b':2, 'c':3, 'm':1}
 
-
+l1.extend(d1)
+print(l1)
 
 
 

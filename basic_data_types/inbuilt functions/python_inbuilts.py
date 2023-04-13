@@ -197,7 +197,6 @@
 # delattr()	Deletes the specified attribute (property or method) from the specified object
 
 
-
 # class Person:
 #     name = 'Lokesh'
 #     age = 29
@@ -259,40 +258,76 @@
 
 # dict()	Returns a dictionary (Array)
 
-a = dict
-print(a)
-a = dict()
-print('a',a)
-b={'a': 1, 'b': 2, 'c': 3}
+# a = dict
+# print(a)
+# a = dict()
+# print('a',a)
+# b={'a': 1, 'b': 2, 'c': 3}
 
-print('b', b)
-a = {
-    'a' : 1, 
-    'b' : 2, 
-    'c' : 3,
-    'c' : 4
-}
+# print('b', b)
+# a = {
+#     'a' : 1, 
+#     'b' : 2, 
+#     'c' : 3,
+#     'c' : 4
+# }
 
-print(a)
+# print(a)
 
-#create dict 
-mydict = dict(a=1, b=2, c=3)
-print(mydict)
+# #create dict 
+# mydict = dict(a=1, b=2, c=3)
+# print(mydict)
 
-for i in a:
-    print(type(i))
+# for i in a:
+#     print(type(i))
 
-print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+# print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 
-for i in mydict:
-    print(type(i))
+# for i in mydict:
+#     print(type(i))
 
 
 
-# dir()	Returns a list of the specified object's properties and methods
+# # dir()	Returns a list of the specified object's properties and methods
+# d = dir(p)
+# print(d)
+# print(type(d))
+
+
 # divmod()	Returns the quotient and the remainder when argument1 is divided by argument2
+
+# a = divmod(10, 2)
+# print(a)
+
+# a = divmod(11, 2)
+# print(a)
+
+
 # enumerate()	Takes a collection (e.g. a tuple) and returns it as an enumerate object
+# The enumerate() function adds a counter as the key of the enumerate object.
+# a = (1,2,3,4,5,2,23,4,2)
+
+# a1 = enumerate(a)
+# print(type(a1))
+# print(dir(a1))
+# for i,j in a1:
+#     print(i, j)
+
+# b = [[1,2],[2,2],[3,3], [4,4]]
+# a1 = enumerate(b)
+# print(type(b))
+# print(dir(b))
+# for i,j in a1:
+#     print(i, j)
+
+
 # eval()	Evaluates and executes an expression
+
+
+
+
+
+
 # exec()	Executes the specified code (or object)
 # filter()	Use a filter function to exclude items in an iterable object
 # float()	Returns a floating point number
