@@ -1,0 +1,4 @@
+To reset local branch
+
+git fetch origin some-branch
+git reset --hard FETCH_HEAD

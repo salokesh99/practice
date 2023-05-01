@@ -1,3 +1,4 @@
+import traceback
 # List is a collection which is ordered and changeable. Allows duplicate members.
 # Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
 # Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
@@ -6,7 +7,7 @@
 # objectType   |  ordered     |  changeable | allow duplicates
     # List          Yes             Yes           Yes
     # Tuple         Yes             No            Yes
-    # set           No              No            No
+    # set           No              Yes            No
     # dict          NO/Yes          Yes           Key:No/Val:Yes
 
 # *Set items are unchangeable, but you can remove and/or add items whenever you like.
@@ -91,20 +92,20 @@ sample_dict = {
     'g' : 7,
     'h' : 8
  }
-# print('my_dict before change---->', my_dict)
-# my_dict.update(sample_dict)
-# print('my_dict after change--->', my_dict)
-# list_of_tuples = [('a', 15), ('b',15), ('c',15)]
-# my_dict.update(list_of_tuples)
-# print("list_of_tuples : my_dict_after update============>>>", my_dict)
+print('my_dict before change---->', my_dict)
+my_dict.update(sample_dict)
+print('my_dict after change--->', my_dict)
+list_of_tuples = [('a', 15), ('b',15), ('c',15)]
+my_dict.update(list_of_tuples)
+print("list_of_tuples : my_dict_after update============>>>", my_dict)
 
 
 # Trial of list of lists
-# list_of_lists = [['a', 10], ['b',10], ['c',10]]
-# list_of_lists_dict = dict(list_of_lists)
-# print('list_of_list_dict', list_of_lists_dict)
-# my_dict.update(list_of_lists)
-# print("list_of_lists: my_dict_after update============>>>", my_dict)
+list_of_lists = [['a', 10], ['b',10], ['c',10]]
+list_of_lists_dict = dict(list_of_lists)
+print('list_of_list_dict', list_of_lists_dict)
+my_dict.update(list_of_lists)
+print("list_of_lists: my_dict_after update============>>>", my_dict)
 
 list_of_tuples = [('a', 15), ('b',15), ('c',15), ('z',10)]
 list_of_lists =  [['a', 10], ['b',10], ['c',10], ['z',11]]
@@ -142,3 +143,207 @@ print('d==================> ', d)
 # my_dict.update(just_list)
 # print("my_dict_after update-------------------->>>", my_dict)
 #still failed with  ValueError: dictionary update sequence element #1 has length 1; 2 is required
+
+
+
+m = {
+    'a' : 1,
+    'b' : 2, 
+    'c' : 3,
+    'd' : 4
+}
+
+# 1. clear
+
+
+# print(m)
+# m.clear()
+# print(m)
+
+
+# 2. copy
+
+d = m.copy()
+
+# print(m)
+# m['a'] = 'Jai Shree Ram'
+# d['b'] = 'Jai Sia Raam'
+# print(d)
+# print(m)
+# print(id(m))
+# print(id(d))
+# d.clear()
+# print(d)
+# print(m)
+
+# 3.d.fromkeys
+
+# k = ['a', 'b', 'c', 'd']
+# v = 1
+
+# d = dict.fromkeys(k,v)
+
+# print(d)
+
+# v = 2
+
+# print(d)
+
+# v = [ 1]
+
+# d = dict.fromkeys(k,v)
+
+# print(d)
+
+# v = [1,2]
+
+# print(d)
+# d = dict.fromkeys(k,v)
+# print(d)
+# v.append(2)
+# print('bbbbb',d)
+
+
+# l = ['a','b', 'c', 'd','e']
+
+# m = [ 1]
+# dn = dict.fromkeys(l, m)
+# print(dn)
+
+# m.append(2)
+# print(dn)
+
+# # set of vowels
+keys = {'a', 'e', 'i', 'o', 'u' }
+
+# # list of number
+# value = [1]
+
+# vowels = dict.fromkeys(keys, value)
+# print(vowels)
+
+# # updates the list value
+# value.append(2)
+
+# print(vowels)
+
+
+
+
+# k= keys
+# v = [1]
+# d = { key : v for key in keys }
+# print(d)
+# v.append(0)
+# print(d)
+
+
+# #dict.setdefault(key, default_val)
+
+
+# d = {
+#     'name': 'Lokesh', 
+#     'age' : 26,
+#     'city' : 'Hyd'
+# }
+
+
+# print('d - > ', d)
+# rv = d.setdefault('age', 28)
+# print('rv--->', rv)
+# print('d.....>>>>...', d)
+# rv = d.setdefault('ageee', 28)
+# print('rv--->', rv)
+# print('d.....>>>>...', d)
+
+# #pop
+# import traceback
+# x = d.pop('city')
+# print('x->', x, 'dddd - > ',d)
+# try: 
+#     x = d.pop('cityyyyy')
+#     print('x->', x, 'dddd - > ',d)
+# except  :
+#     print('e--->>>')
+#     traceback.print_exc()
+
+
+# x = d.pop('cityyyyy', "city not found!!!")
+# print('x->', x, 'dddd - > ',d)
+
+
+# ds = d.popitem()
+# print('ds........', ds)
+# c = {}
+# # dc = c.popitem()
+# # print('dc...........>>>', dc)
+
+
+# print(c)
+# x = c.setdefault('name', "Lokesh")
+# print(c)
+# print(x)
+
+# #update
+
+
+# d = {'a':1,'b':2}
+# d.update({'b':5})
+# print(d)
+# d.update({'r':55})
+# print(d)
+# try:
+#     d.update((1,2))
+#     print(d)
+# except:
+#     traceback.print_exc()
+
+# d.update([(1,2)])
+# print(d)
+
+
+
+try:
+    d.update(((11,2)))
+    print(d)
+except:
+    print("can't add ((11,2))")
+    traceback.print_exc()
+
+
+try:
+    d.update(((11,2),))
+    print('Type==============>>>',type(((11,2),)))
+    print('Type===============>>>',type(((11,2))))
+    print(d)
+except:
+    traceback.print_exc()
+
+
+# try:
+#     d.update(11,2)
+#     print(d)
+# except:
+#     traceback.print_exc()
+
+# try:
+#     d.update([11,2])
+#     print(d)
+# except:
+#     traceback.print_exc()
+
+try:
+    d.update([(11,2)])
+    print(d)
+except:
+    traceback.print_exc()
+
+
+
+
+try:
+    d.update([(11,2), (12, 13)])
+    print(d)
+except:
+    traceback.print_exc()
+

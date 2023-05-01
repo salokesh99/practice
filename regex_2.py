@@ -68,17 +68,39 @@ import re
 # pattern = re.compile("^(19|20)[0-9]{2}[\-/](1[0-2]|0[1-9])[\-/](0[1-9]|[1][0-9]|[3][0-1])$")
 # a = ['2022-12-13', '1945-23-21', '2012-12-12', '3212-23-32', '2032-11-12', '2022-11-32', '2023-10-00', '2025-00-22', '1912-01-13', '1913-09-09']
 # for i in a :
-#     print(pattern.search(str(i)))
+#     print(pattern.match(str(i)))
 # 
 
 
 #avoid all zeroes value 
 
-pattern = re.compile("^(?!0+$)\d+$")
-p= '0000000000'
-print(pattern.search(p))
+# pattern = re.compile("^(?!0+$)\d+$")
+# p= '0000000000'
+# print(pattern.search(p))
 
-#avoid all 1's
-pattern = re.compile("^(?!1+$)\d+$")
-p= '11111111'
-print(pattern.search(p))
+# #avoid all 1's
+# pattern = re.compile("^(?!1+$)\d+$")
+# p= '11111111'
+# print(pattern.search(p))
+
+
+
+pattern = re.compile("^[a-zA-Z1-9\s._\-]*$")
+p='This is a sample waybill LR – 887987979'
+
+a = [
+'This is a sample waybill LR – 887987979',
+'This is a sample  waybill LR** - 887987979',
+'This is a samplegggggggggghjjjjjjjjghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhj  waybill LR** – 887987979',
+'This is a sample waybill LR887987979',
+'',
+'This is a sample waybill LR 887987979'
+
+]
+
+# print(pattern.match(p))
+for i in a:
+    if not pattern.match(i) :
+        print("not okay")
+    else:
+        print('all ok')

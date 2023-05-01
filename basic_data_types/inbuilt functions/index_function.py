@@ -16,10 +16,10 @@ class Total:
 
 total_price = Total(5,5)
 
-print(int(total_price),bin(total_price))
-print(total_price.__str__())
-print(total_price.__repr__())
-print(str(total_price))
-print(total_price)
+print('10',int(total_price),bin(total_price))
+print('11',total_price.__str__())
+print('12',total_price.__repr__())
+print('13',str(total_price))
+print('14',total_price)
 # x = repr(total_price)
 # print(x)
