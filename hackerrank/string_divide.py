@@ -31,8 +31,6 @@
 #                 temp_str += j
 #         print(string[i:i+x], '==>', temp_str)
 
-    
-
 
 # if __name__ == '__main__':
 #     string, k = input(), int(input())
