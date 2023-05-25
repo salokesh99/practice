@@ -1,4 +1,10 @@
-a = { 1,2,3,4}
-b = {1,2}
+from collections import defaultdict
 
-print(b.issubset(a))
+d = defaultdict(list)
+d['key1'].append('Jnv')
+d['key2'] = 'sunshine'
+print(d)
+print(d['ram'])
+
+# d1 = dict()
+# print(d1['ram'])
