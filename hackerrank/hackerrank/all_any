@@ -1,0 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+k = int(input())
+x = input().split()
+print(any([ i == i[::-1] for i in x]) if all( int(i) >= 0 for i in x) else False)
